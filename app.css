@@ -1,0 +1,7 @@
+.cc-modes { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.cc-modes button { justify-content: flex-start; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.cc-modes button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.cc-grid { align-items: start; }
+.cc-box { min-height: 320px; max-height: 560px; overflow: auto; }
+.cc-out { font-family: var(--font); font-size: 14.5px; margin-bottom: 0; }
+.cc-out:empty::before { content: "Your converted text appears here."; color: var(--text-3); }

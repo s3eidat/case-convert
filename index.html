@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' data: blob:; connect-src 'self' data: blob:; worker-src 'self' blob:; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Case Convert — Free Text Case Converter: UPPER, Title, camelCase, snake_case | S3eidat Tools</title>
+<meta name="description" content="Convert text to UPPER, lower, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE and more, line by line. Free, private, runs in your browser.">
+<meta property="og:title" content="Case Convert — free, private case converter">
+<meta property="og:description" content="UPPER, lower, Title, camelCase, snake_case and more. Runs 100% in your browser.">
+<meta property="og:image" content="screenshot.png">
+<link rel="icon" href="kit/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="kit/kit.css">
+<link rel="stylesheet" href="app.css">
+<script src="kit/kit.js"></script>
+</head>
+<body data-tool="case-convert">
+<main class="s3-main">
+  <section class="s3-hero">
+    <h1>Case Convert</h1>
+    <p>Paste text, pick a case. Every line is converted on its own, so you can convert a whole list of titles or variable names at once.</p>
+  </section>
+
+  <section class="card">
+    <div class="cc-modes" id="modes" role="group" aria-label="Case"></div>
+  </section>
+
+  <div class="grid-2 cc-grid mt">
+    <section class="card">
+      <div class="row between">
+        <h2>Input</h2>
+        <div class="row">
+          <button class="btn ghost small" id="sample">Sample</button>
+          <button class="btn ghost small" id="clear"><svg class="i"><use href="#i-trash"/></svg>Clear</button>
+        </div>
+      </div>
+      <label for="input" class="faint">Text to convert, one item per line if you like</label>
+      <textarea class="textarea prose cc-box mt" id="input" dir="auto" spellcheck="false" placeholder="Type or paste text here…"></textarea>
+    </section>
+
+    <section class="card">
+      <div class="row between">
+        <h2>Output <small id="modeName"></small></h2>
+        <div class="row">
+          <button class="btn small" id="use" title="Replace the input with this output">Use as input</button>
+          <button class="btn small primary" id="copy"><svg class="i"><use href="#i-copy"/></svg>Copy</button>
+        </div>
+      </div>
+      <pre class="out cc-box cc-out mt" id="out" tabindex="0" dir="auto" aria-live="polite"></pre>
+      <p class="faint mt" id="info"></p>
+    </section>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
